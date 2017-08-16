@@ -1,0 +1,37 @@
+
+<h2 class="display-4">Account List</h2>
+
+<table class="table table-striped">
+    
+    <thead class="thead-inverse">
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>balance</th>
+            <th>Portfolio</th>
+        </tr>
+    </thead>
+    <tbody>
+            <% @accounts.each do |a| %>
+            <tr>
+                <td>
+                    <%= a.id %>
+                </td>
+                
+                <td><%= a.name%></td>
+                
+                <td><%= a.balance %></td>
+              
+                <td><div class="list-group">
+              
+                <% a.find_portfolios .each do |p|%>
+                        <%= link_to p.name, portfolio_path(p), class: "btn btn-secondary btn-sm btn-block" %>
+                <% end %>
+                </div>
+                </td>
+                
+            </tr>
+            <% end %>
+      
+    </tbody>
+</table>
