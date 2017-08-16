@@ -25,7 +25,7 @@
                 <td><div class="list-group">
               
                 <% a.find_portfolios .each do |p|%>
-                        <%= link_to p.name, portfolio_path(p), class: "btn btn-secondary btn-sm btn-block" %>
+                        <%= link_to p.name, portfolio_path(a,p), class: "btn btn-secondary btn-sm btn-block" %>
                 <% end %>
                 </div>
                 </td>

@@ -1,2 +1,27 @@
 
-hello!
+<h2 class="display-4">Account List</h2>
+
+<table class="table table-striped">
+    
+    <thead class="thead-inverse">
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+           
+        </tr>
+    </thead>
+    <tbody>
+            <% @portfolios.each do |p| %>
+            <tr>
+                <td>
+                    <%= p.id %>
+                </td>
+                
+                <td><%= p.name%></td>
+                
+                
+            </tr>
+            <% end %>
+      
+    </tbody>
+</table>
